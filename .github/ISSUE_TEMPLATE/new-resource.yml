@@ -1,0 +1,79 @@
+name: 🚀 Suggest New Resource
+description: Suggest a new AI coding tool, tutorial, or resource
+title: "[Resource]: "
+labels: ["enhancement", "new-resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new resource! Please provide as much detail as possible.
+  
+  - type: input
+    id: resource-name
+    attributes:
+      label: Resource Name
+      description: What is the name of the resource?
+      placeholder: e.g., Awesome AI Tool
+    validations:
+      required: true
+  
+  - type: input
+    id: resource-url
+    attributes:
+      label: URL
+      description: Link to the resource
+      placeholder: https://example.com
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which category does this belong to?
+      options:
+        - Browser-Based Tools
+        - IDEs and Code Editors
+        - Mobile Apps
+        - Plugins and Extensions
+        - Local Apps
+        - Command Line Tools
+        - Task Management
+        - Documentation
+        - Learning Resources
+        - Research Papers
+        - Communities
+        - News and Social Media
+    validations:
+      required: true
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief description of the resource (1-2 sentences)
+      placeholder: What makes this resource valuable?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should this be included?
+      description: Explain why this resource is valuable for the community
+    validations:
+      required: true
+  
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked that this resource is not already listed
+          required: true
+        - label: The resource is actively maintained
+          required: true
+        - label: I have tested this resource myself
+          required: true
+        - label: The link works and is accessible
+          required: true
